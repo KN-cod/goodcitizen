@@ -74,18 +74,16 @@
             display: flex;
             justify-content: space-evenly; /* Center-align case cards */
             flex-wrap: wrap;
-            overflow-y: scroll;           
+            overflow: hidden;           
         }
-        .case-cards::-webkit-scrollbar {
-            display: none;
-        }
+       
 
         .case-card {
             background-color: #fff;
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: calc(50% - 20px); /* Adjusted width to display two items per row */
+            width: 45%; /* Adjusted width to display two items per row */
             margin: 2%;
         }
 
@@ -148,34 +146,16 @@
             <div class="case-card">
                 <img src="https://ychef.files.bbci.co.uk/1280x720/p020rm0x.jpg" alt="Road Traffic Issues">
                 <div class="case-title">Road Traffic Issues</div>
-                <div class="case-date">Date: 2024-04-22</div>
-                <div class="case-status">Status: Resolved</div>
+               
+               
             </div>
             <div class="case-card">
                 <img src="https://ychef.files.bbci.co.uk/1280x720/p020rm0x.jpg" alt="Road Traffic Issues">
                 <div class="case-title">Road Traffic Issues</div>
-                <div class="case-date">Date: 2024-04-22</div>
-                <div class="case-status">Status: Resolved</div>
+                
+                
             </div>
-            <div class="case-card">
-                <img src="https://ychef.files.bbci.co.uk/1280x720/p020rm0x.jpg" alt="Road Traffic Issues">
-                <div class="case-title">Road Traffic Issues</div>
-                <div class="case-date">Date: 2024-04-22</div>
-                <div class="case-status">Status: Resolved</div>
-            </div>
-            <div class="case-card">
-                <img src="https://ychef.files.bbci.co.uk/1280x720/p020rm0x.jpg" alt="Road Traffic Issues">
-                <div class="case-title">Road Traffic Issues</div>
-                <div class="case-date">Date: 2024-04-22</div>
-                <div class="case-status">Status: Resolved</div>
-            </div>
-            <div class="case-card">
-                <img src="https://ychef.files.bbci.co.uk/1280x720/p020rm0x.jpg" alt="Road Traffic Issues">
-                <div class="case-title">Road Traffic Issues</div>
-                <div class="case-date">Date: 2024-04-22</div>
-                <div class="case-status">Status: Resolved</div>
-            </div>
-
+            
             <!-- Repeat case-card structure for other cases -->
 
         </div>

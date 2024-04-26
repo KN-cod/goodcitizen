@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Web App</title>
+    <title>Contact Form</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    
     <style>
-        * {
+         * {
             box-sizing: border-box;
             padding: 0;
             margin: 0;
@@ -28,226 +26,120 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: aliceblue;
+            background-color:  #7BC342;
             flex-direction: column;
             box-shadow: 2px 2px 2px green;
-            width: 90%; /* Adjusted width */
-            max-width: 600px; /* Added max-width for responsiveness */
+            width: 45%;
             margin: 2%;
-            height: 90vh; /* Adjusted height */
+            height: 90%;
             padding: 2%;
-            position: relative;
-            background-color: #7BC342;
-        }
-
-        .chat-container {
-            border-radius: 10px;
-            padding: 20px;
-            max-width: 100%; /* Adjusted max-width */
-            width: 100%;
-            margin-top: 2%;
-            text-align: center;
-        }
-
-        .message-container {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            max-height: 300px;
             overflow-y: auto;
+            color: #fff;
+            border-radius: 2%;
         }
-
-        .message-container::-webkit-scrollbar {
+        #contact-form{
+            width: 100%;
+        }
+        .container:-webkit-scrollbar {
             display: none;
         }
-
-        .message {
-            max-width: 70%;
-            word-wrap: break-word;
-            margin-bottom: 10px;
-            position: relative;
-            padding: 10px;
-            border-radius: 10px;
-            display: inline-block;
-            clear: both;
+        .form-group {
+            margin-bottom: 20px;
         }
 
-        .admin-message {
-            background-color: #009A31;
-            color: #fff;
-            align-self: flex-start;
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
         }
 
-        .user-message {
-            background-color: #bed1af;
-            color: #000;
-            align-self: flex-end;
-        }
-
-        .profile img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            margin-right: 10px;
-            display: inline-block;
-        }
-
-        .profile.admin {
-            text-align: left;
-        }
-
-        .profile.user {
-            text-align: right;
-        }
-
-        .input-container {
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
             width: 100%;
-            display: flex;
-            align-items: center;
-            margin-top: 10px;
-        }
-
-        .input-container input {
-            flex: 1;
             padding: 10px;
+            font-size: 16px;
             border-radius: 5px;
             border: 1px solid #ccc;
-            margin-right: 10px;
-            font-size: 16px;
         }
 
-        .input-container button {
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        .form-group button {
             padding: 10px 20px;
+            font-size: 16px;
             border: none;
-            background-color: #32CD32;
-            color: #fff;
             border-radius: 5px;
+            background-color: #32CD32; /* Green color */
+            color: #fff;
             cursor: pointer;
         }
 
         .back-button {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background-color: #228B22;
-            color: #fff;
             padding: 10px 20px;
+            font-size: 16px;
             border: none;
             border-radius: 5px;
+            background-color: #228B22; /* Dark green color */
+            color: #fff;
             cursor: pointer;
+            margin: 20px;
         }
 
-        @media screen and (max-width: 600px) {
+        @media (max-width: 600px) {
             .container {
-                width: 95%; /* Adjusted width */
-            }
-
-            .chat-container {
-                padding: 10px;
-            }
-
-            .message {
-                max-width: 100%;
-            }
-        }
-
-        @media screen and (max-width: 400px) {
-            .input-container {
-                flex-direction: column;
-            }
-
-            .input-container input {
-                margin-bottom: 10px;
+                width: 90%;
+                margin: 20px auto;
             }
         }
     </style>
 </head>
-
 <body>
 
-    <!-- Report Problem Page -->
-    <div class="container">
-        <button class="back-button" onclick="window.location.href='dashboard.html'">Back</button>
-        <div class="chat-container">
-            <div class="message-container">
-                <!-- Messages will be added here dynamically -->
-            </div>
-
-
+<div class="container">
+    <button class="back-button" onclick="window.history.back()">Back</button>
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
         </div>
-        <div class="input-container">
-            <input id="messageInput" type="text" placeholder="Type your message...">
-            <button id="sendMessageButton" type="button">Send</button>
+        <div class="form-group">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" placeholder="Enter subject">
         </div>
-    </div>
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Enter your message"></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit">Send</button>
+        </div>
+    </form>
+</div>
 
-    <script>
-        // Array of sentences
-        const sentences = [
-            "Sure! What seems to be the problem?",
-            "Okay we are dispatching a team to clear it.",
-            "Thank you for reporting. We will take care of it.",
-            "Please provide more details about the issue.",
-            "We apologize for the inconvenience. We'll fix it soon."
-        ];
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+        var email = document.getElementById('email').value;
+        var subject = document.getElementById('subject').value;
+        var message = document.getElementById('message').value;
 
-        // Function to get a random sentence
-        function getRandomSentence() {
-            return sentences[Math.floor(Math.random() * sentences.length)];
+        // Simple validation
+        if (email.trim() === '' || subject.trim() === '' || message.trim() === '') {
+            alert('Please fill in all fields');
+            return;
         }
 
-        // Function to add a message to the message container
-        function addMessage(text, isAdmin) {
-            const messageContainer = document.querySelector('.message-container');
-            const messageDiv = document.createElement('div');
-            messageDiv.classList.add('message');
-            messageDiv.classList.add(isAdmin ? 'admin-message' : 'user-message');
+        // Simulate sending message (for demonstration purposes)
+        alert('Message sent successfully');
 
-            const profileDiv = document.createElement('div');
-            profileDiv.classList.add('profile');
-            profileDiv.classList.add(isAdmin ? 'admin' : 'user');
-
-            const profileImg = document.createElement('img');
-            profileImg.src = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png";
-            profileImg.alt = isAdmin ? "Admin Profile" : "User Profile";
-
-            profileDiv.appendChild(profileImg);
-            messageDiv.appendChild(profileDiv);
-
-            const messageText = document.createElement('p');
-            messageText.textContent = text;
-            messageDiv.appendChild(messageText);
-
-            messageContainer.appendChild(messageDiv);
-
-            // Scroll to bottom
-            messageContainer.scrollTop = messageContainer.scrollHeight;
-        }
-
-        // Populate messages
-        document.addEventListener('DOMContentLoaded', function () {
-            const messageContainer = document.querySelector('.message-container');
-
-            sentences.forEach(function (sentence, index) {
-                addMessage(sentence, index % 2 === 0);
-            });
-        });
-
-        // Add event listener to send message button
-        document.getElementById('sendMessageButton').addEventListener('click', function () {
-            const messageInput = document.getElementById('messageInput');
-            const message = messageInput.value.trim();
-
-            if (message !== '') {
-                sentences.push(message);
-                addMessage(message, false);
-                messageInput.value = ''; // Clear input
-            } else {
-                alert('Please enter a message.');
-            }
-        });
-    </script>
+        // Clear the form
+        document.getElementById('contact-form').reset();
+    });
+</script>
 
 </body>
-
 </html>
