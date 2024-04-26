@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Web App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: aliceblue;
+            box-shadow: 2px 2px 2px green;
+            width: 90%; /* Adjusted width for responsiveness */
+            max-width: 700px; /* Added max-width */
+            height: 90%;
+            margin: 2%;
+            padding: 2%;
+            overflow-y: auto;
+            background-color: #7BC342;
+
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #228B22;
+            color: #fff;
+            border-radius: 10px;
+            margin-bottom: 20px; /* Added margin for spacing */
+        }
+
+        .navbar img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .main-content {
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%; /* Adjusted width for responsiveness */
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .links a {
+            background-color: #3CB371;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 10px 0;
+            transition: background-color 0.3s ease;
+            width: 75%;
+        }
+
+        .links a:hover {
+            background-color: #45a049;
+        }
+
+        @media screen and (max-width: 768px) {
+            .main-content {
+                padding: 10px;
+            }
+            .links a {
+                width: 90%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .navbar img {
+                width: 30px;
+                height: 30px;
+            }
+            .main-content {
+                margin-top: 10%;
+            }
+            .links a {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Dashboard Page -->
+    <div class="container">
+        <div class="navbar">
+            <img src="../gclogo.png" alt="">
+            <div>
+                <span>Your Current Points: 100</span>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div>
+                <a href="dashboard.html"  class="btn" style="background-color:  #009A31; color: #fff;">Back</a>
+            </div>
+            <div class="links">
+                <a href="report.html"  class="btn">Report a Problem</a>
+                <a href="prev.html"  class="btn">View Prev Cases</a>
+                <a href="redeem.html"  class="btn">Redeem Points</a>
+                <a href="apply.html"  class="btn">Apply for Service</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

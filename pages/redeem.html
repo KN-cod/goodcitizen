@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redeem Points</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aliceblue;
+            flex-direction: column;
+            box-shadow: 2px 2px 2px green;
+            width: 90%; /* Adjusted width */
+            max-width: 800px; /* Added max-width for responsiveness */
+            margin: 2%;
+            height: 90vh; /* Adjusted height */
+            border-radius: 2%;
+            padding: 2%;
+            background-color: #7BC342;
+color: #fff;
+        }
+
+        .input-container {
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 400px; /* Added max-width for input container */
+        }
+
+        .input-container label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .input-container input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            color: black;
+        }
+
+        .service-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px; /* Added gap between service cards */
+            overflow-y: auto;
+            max-width: 100%;
+        }
+
+        .service-cards::-webkit-scrollbar {
+            display: none;
+        }
+
+        .service-card {
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 0 1 calc(45% - 20px); /* Adjusted width calculation */
+        }
+
+        .service-card img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .service-title {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: black;
+        }
+
+        .service-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .back-button {
+            background-color: #228B22;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <button class="back-button" onclick="window.location.href='dashboard.html'">Back to Dashboard</button>
+        <h2>Redeem Points</h2>
+        <div class="input-container">
+            <label for="points">Redeem points:</label>
+            <input type="number" id="points" name="points" placeholder="Enter points">
+        </div>
+
+        <h2>Available Services</h2>
+
+        <div class="service-cards">
+            <div class="service-card">
+                <img src="https://www.computerhope.com/jargon/s/service.png" alt="Service 1">
+                <div class="service-title">Service 1</div>
+                <div class="service-description">Description of Service 1</div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://www.computerhope.com/jargon/s/service.png" alt="Service 2">
+                <div class="service-title">Service 2</div>
+                <div class="service-description">Description of Service 2</div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://www.computerhope.com/jargon/s/service.png" alt="Service 3">
+                <div class="service-title">Service 3</div>
+                <div class="service-description">Description of Service 3</div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://www.computerhope.com/jargon/s/service.png" alt="Service 4">
+                <div class="service-title">Service 4</div>
+                <div class="service-description">Description of Service 4</div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://www.computerhope.com/jargon/s/service.png" alt="Service 5">
+                <div class="service-title">Service 5</div>
+                <div class="service-description">Description of Service 5</div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://www.computerhope.com/jargon/s/service.png" alt="Service 6">
+                <div class="service-title">Service 6</div>
+                <div class="service-description">Description of Service 6</div>
+            </div>
+
+            <!-- Add more service cards here as needed -->
+        </div>
+    </div>
+
+</body>
+
+</html>

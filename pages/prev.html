@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Web App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aliceblue;
+            flex-direction: column;
+            box-shadow: 2px 2px 9px green;
+            width: 75%;
+            margin: 2%;
+            height: 90%;
+            padding: 2%;
+            max-width: 800px;
+            background-color: #7BC342;
+
+        }
+
+        
+
+        .back-button {
+            margin: 20px;
+            background-color: #228B22;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin: 0px 20px;
+        }
+
+        .profile img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 10px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .case-cards {
+            display: flex;
+            justify-content: space-evenly; /* Center-align case cards */
+            flex-wrap: wrap;
+            overflow-y: scroll;           
+        }
+        .case-cards::-webkit-scrollbar {
+            display: none;
+        }
+
+        .case-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: calc(50% - 20px); /* Adjusted width to display two items per row */
+            margin: 2%;
+        }
+
+        .case-card img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .case-title {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: black;
+        }
+
+        .case-date {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .case-status {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        @media screen and (max-width: 768px) {
+            .case-card {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .case-card {
+                width: calc(100% - 20px);
+            }
+
+            .case-cards {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Previous Cases Page -->
+    <div class="container">
+        
+        <div class="profile">
+            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                alt="User Profile">
+            <h3>User Name</h3>
+            <h4>Maldives</h4>
+            <button class="back-button" onclick="window.location.href='dashboard.html'">Back to Dashboard</button>
+        </div>
+        <h2>Previous Cases</h2>
+
+        <div class="case-cards">
+            <div class="case-card">
+                <img src="https://ychef.files.bbci.co.uk/1280x720/p020rm0x.jpg" alt="Road Traffic Issues">
+                <div class="case-title">Road Traffic Issues</div>
+                <div class="case-date">Date: 2024-04-22</div>
+                <div class="case-status">Status: Resolved</div>
+            </div>
+            <div class="case-card">
+                <img src="https://ychef.files.bbci.co.uk/1280x720/p020rm0x.jpg" alt="Road Traffic Issues">
+                <div class="case-title">Road Traffic Issues</div>
+                <div class="case-date">Date: 2024-04-22</div>
+                <div class="case-status">Status: Resolved</div>
+            </div>
+            <div class="case-card">
+                <img src="https://ychef.files.bbci.co.uk/1280x720/p020rm0x.jpg" alt="Road Traffic Issues">
+                <div class="case-title">Road Traffic Issues</div>
+                <div class="case-date">Date: 2024-04-22</div>
+                <div class="case-status">Status: Resolved</div>
+            </div>
+            <div class="case-card">
+                <img src="https://ychef.files.bbci.co.uk/1280x720/p020rm0x.jpg" alt="Road Traffic Issues">
+                <div class="case-title">Road Traffic Issues</div>
+                <div class="case-date">Date: 2024-04-22</div>
+                <div class="case-status">Status: Resolved</div>
+            </div>
+            <div class="case-card">
+                <img src="https://ychef.files.bbci.co.uk/1280x720/p020rm0x.jpg" alt="Road Traffic Issues">
+                <div class="case-title">Road Traffic Issues</div>
+                <div class="case-date">Date: 2024-04-22</div>
+                <div class="case-status">Status: Resolved</div>
+            </div>
+
+            <!-- Repeat case-card structure for other cases -->
+
+        </div>
+    </div>
+
+</body>
+
+</html>
